@@ -5,6 +5,8 @@
 const username = document.querySelector("#name")
 const mail = document.querySelector("#mail")
 const web = document.querySelector("#web")
+const dir = document.querySelector("#direccion")
+const zipcode = document.querySelector("#zipcode")
 
 //destructurado 
 const getuser = async() => {
@@ -14,6 +16,8 @@ const getuser = async() => {
     username.innerHTML = datos[0].name;
     mail.innerHTML = datos[0].email;
     web.innerHTML = datos[0].website;
+    dir.innerHTML = datos[0].address.street;
+    zipcode.innerHTML = datos[0].address.zipcode;
 }
 
 getuser();
